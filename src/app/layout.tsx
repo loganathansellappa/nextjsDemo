@@ -7,10 +7,12 @@ import Container from "@/components/container";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Evento Find Events around you",
-  description: "Browse more than 10000 events",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Evento Find Events around you",
+    description: "Browse more than 10000 events",
+  };
+}
 
 export default function RootLayout({
   children,

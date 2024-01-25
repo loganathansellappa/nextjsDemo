@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {EventoEvent} from "@/lib/types";
 import H1 from "@/components/h1";
+import {getEventsBySlug} from "@/lib/utils";
 
 type EventsPageProps = {
     params: {
@@ -8,9 +9,17 @@ type EventsPageProps = {
     }
 
 }
+
+export async function generateMetadata({ params: {slug} }: EventsPageProps) {
+    const event: EventoEvent = await getEventsBySlug(slug);
+    return {
+        title: `Events in ${event.name.charAt(0).toUpperCase() + event.name.slice(1)}`,
+        description: `Browse events in ${event.name.charAt(0).toUpperCase() + event.name.slice(1)}`,
+    };
+};
+
 export default async function  EventsPage({params: {slug}}: EventsPageProps) {
-    const req = await fetch(`https://bytegrad.com/course-assets/projects/evento/api/events/${slug}`);
-    const event: EventoEvent = await req.json();
+    const event: EventoEvent = await getEventsBySlug(slug);
     return (<main>
             <section className={"relative overflow-hidden flex justify-center items-center py-14 md:py-20"}>
                 <Image src={event.imageUrl}
