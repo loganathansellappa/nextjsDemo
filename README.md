@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+```markdown
+# Sample Demo App
+
+This is a sample NextJS app that uses SSR, PostgreSQL, and Prisma ORM.
 
 ## Getting Started
 
-First, run the development server:
+To run the development server, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install dependencies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Push Prisma migrations to the database:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   npx prisma db push
+   ```
+
+3. Seed the database (if needed):
+
+   ```bash
+   npx prisma db seed
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+<!-- Add any additional information or resources for learning here -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployed App
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The app has been deployed [here](https://ns-nddi10u9f-logan2.vercel.app/events/all).
 
-## Deploy on Vercel
+<!-- Add any additional information about the deployed app, if needed -->
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can customize the "Learn More" section with any additional information or resources related to your project. If there are any specific instructions, dependencies, or configurations that users should be aware of, consider including them in this section. Additionally, feel free to add more details about the deployed app if necessary.
