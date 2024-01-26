@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {EventoEvent} from "@/lib/types";
 import H1 from "@/components/h1";
-import {getEventsBySlug} from "@/lib/utils";
+import {getEventsBySlug} from "@/lib/server-utils";
 
 type EventsPageProps = {
     params: {
@@ -18,6 +18,16 @@ export async function generateMetadata({ params: {slug} }: EventsPageProps) {
     };
 };
 
+export async function generateStaticParams() {
+    return [
+        {
+            slug: "comedy-extravaganza",
+        },
+        {
+            slug: "dj-practice-session",
+        },
+    ]
+}
 export default async function  EventsPage({params: {slug}}: EventsPageProps) {
     const event: EventoEvent = await getEventsBySlug(slug);
     return (<main>
