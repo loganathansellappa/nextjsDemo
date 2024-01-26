@@ -1,5 +1,3 @@
-
-```markdown
 # Sample Demo App
 
 This is a sample NextJS app that uses SSR, PostgreSQL, and Prisma ORM.
@@ -11,7 +9,7 @@ To run the development server, follow these steps:
 1. Install dependencies:
 
    ```bash
-   npm install
+    npm install
    ```
 
 2. Push Prisma migrations to the database:
