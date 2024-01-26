@@ -38,7 +38,7 @@ To run the development server, follow these steps:
 
 ## Deployed App
 
-The app has been deployed [here](https://ns-nddi10u9f-logan2.vercel.app/events/all).
+The app has been deployed [here](ns-nddi10u9f-logan2.vercel.app).
 
 <!-- Add any additional information about the deployed app, if needed -->
 ```
